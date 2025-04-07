@@ -7,7 +7,7 @@ This repository contains the code and experiments developed for my Bachelor's th
 ## 📁 Repository Structure
 
 ```
-umbertocrema/
+thesis/
 │
 ├── gifs/                         # rollout visualizations and videos
 ├── Minari/                       # local helper code (ignored by Git)
@@ -30,8 +30,8 @@ umbertocrema/
 ### 1. Clone the repository via SSH
 
 ```bash
-git clone git@github.com:UmbertoCremathesis/umbertocrema.git
-cd umbertocrema
+git clone git@github.com:UmbertoCremathesis/thesis.git
+cd thesis
 ```
 
 ### 2. Create and activate the environment
@@ -84,9 +84,3 @@ Full details in [`environment.yml`](./environment.yml)
 **Umberto Crema**  
 Bachelor's Degree in Computer Engineering  
 University of Padova — Academic Year 2024/2025
-
----
-
-## 📄 License
-
-This project is part of an academic thesis.
