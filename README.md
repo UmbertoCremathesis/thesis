@@ -1,69 +1,92 @@
 # Offline Reinforcement Learning for Robotic Control — Bachelor's Thesis
 
-This repository contains the code and experiments developed for my Bachelor's thesis in Computer Engineering at the University of Padova. The goal of the project is to explore and evaluate offline reinforcement learning algorithms in robotic simulation environments using datasets from the D4RL and Minari libraries.
+This repository contains the code and experiments developed for my Bachelor's thesis in Computer Engineering at the University of Padova. The goal of the project is to explore and evaluate offline reinforcement learning algorithms in robotic simulation environments using datasets from the D4RL suite (accessed via Minari) and training with D3RLPY.
+
+---
 
 ## 📁 Repository Structure
 
 ```
-thesis-offline-rl/
+umbertocrema/
 │
-├── gifs/                         # rollout visualizations and GIFs
-├── Minari/                       # scripts or utilities related to dataset handling
+├── gifs/                         # rollout visualizations and videos
+├── Minari/                       # local helper code (ignored by Git)
 │
-├── notebooks/                    # Jupyter Notebooks for exploration and experimentation
-│   ├── 00_presentazione.ipynb        # early exploration of the Pen dataset for internal discussion
-│   ├── 01_caricamento_datasets.ipynb # loading and analyzing Pen and Relocate datasets
-│   └── 02_algoritmi_d3rlpy.ipynb     # implementation of IQL and other offline RL algorithms
+├── notebooks/                    # Jupyter Notebooks for each phase
+│   ├── 00_presentazione.ipynb        # initial dataset exploration (Pen)
+│   ├── 01_caricamento_datasets.ipynb # loading and inspecting Pen + Relocate datasets
+│   └── 02_algoritmi_d3rlpy.ipynb     # IQL and other offline RL experiments
 │
-├── src/                          # (optional) reusable Python code for agents, utils, etc.
-├── results/                      # evaluation logs, metrics, plots
-│
+├── results/                      # logs, plots, evaluation metrics
+├── environment.yml               # conda environment definition
 ├── .gitignore
-├── environment.yml
 └── README.md
 ```
 
+---
+
 ## 🚀 Getting Started
 
-### 1. Clone the repository
+### 1. Clone the repository via SSH
+
 ```bash
-git clone https://github.com/your-org/thesis-offline-rl.git
-cd thesis-offline-rl
+git clone git@github.com:UmbertoCremathesis/umbertocrema.git
+cd umbertocrema
 ```
 
-### 2. Set up the Conda environment
+### 2. Create and activate the environment
+
 ```bash
 conda env create -f environment.yml
-conda activate thesis-rl
+conda activate thesis-env
 ```
 
-### 3. Launch Jupyter Lab
+### 3. Register the environment as a Jupyter kernel (once)
+
+```bash
+python -m ipykernel install --user --name thesis-env --display-name "Python (thesis-env)"
+```
+
+### 4. Launch Jupyter Lab
+
 ```bash
 jupyter lab
 ```
+
+Then, switch the notebook kernel to `Python (thesis-env)`.
+
+---
 
 ## 🧪 Notebooks
 
 | Notebook                         | Description |
 |----------------------------------|-------------|
-| `00_presentazione.ipynb`         | Initial notebook for presenting dataset insights (Pen) |
-| `01_caricamento_datasets.ipynb` | Loads and analyzes datasets `pen` and `relocate` using Minari |
+| `00_presentazione.ipynb`         | Initial exploration of Adroit Pen dataset |
+| `01_caricamento_datasets.ipynb` | Loads and analyzes Pen and Relocate datasets via Minari |
 | `02_algoritmi_d3rlpy.ipynb`     | Trains offline RL policies (e.g., IQL) using D3RLPY |
 
-## 📦 Dependencies
+---
 
-Main libraries used:
-- `minari`
-- `d3rlpy`
-- `gymnasium`
-- `mujoco`
-- `wandb`
-- `numpy`, `matplotlib`, `pandas`, etc.
+## 📦 Environment
 
-All dependencies are listed in the `environment.yml` file.
+Key packages used:
+
+- `minari`, `d3rlpy`, `gymnasium`, `mujoco`, `robosuite`
+- `torch`, `wandb`, `pybullet`, `moviepy`, `pygame`
+- `jupyterlab`, `numpy`, `pandas`, `matplotlib`
+
+Full details in [`environment.yml`](./environment.yml)
+
+---
 
 ## 👤 Author
 
 **Umberto Crema**  
 Bachelor's Degree in Computer Engineering  
 University of Padova — Academic Year 2024/2025
+
+---
+
+## 📄 License
+
+This project is part of an academic thesis.
