@@ -1,1 +1,45 @@
+# === System files ===
+.DS_Store
+Thumbs.db
+
+# === Python bytecode ===
+__pycache__/
+*.py[cod]
+*$py.class
+
+# === Virtual environments ===
+env/
+venv/
+.venv/
+ENV/
+env.bak/
+
+# === Jupyter ===
+.ipynb_checkpoints/
+
+# === Logs, outputs, weights, and models ===
+*.log
+*.out
+*.h5
+*.pth
+*.pt
+*.ckpt
+*.pkl
+*.joblib
+*.npy
+*.npz
+
+# === OS or editor metadata ===
+*.swp
+*.swo
+*.bak
+
+# === Videos, images, gifs (output from rollouts etc.) ===
+*.gif
+*.mp4
+*.avi
+
+# === Project-specific folders ===
 Minari/
+results/
+gifs/
