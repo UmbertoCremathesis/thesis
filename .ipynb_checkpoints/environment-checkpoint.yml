@@ -1,0 +1,24 @@
+name: thesis-env
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - jupyterlab
+  - numpy
+  - pandas
+  - matplotlib
+  - scikit-learn
+  - pip
+  - pip:
+      - minari
+      - d3rlpy
+      - gymnasium
+      - mujoco
+      - mujoco-py
+      - robosuite
+      - pettingzoo
+      - torch
+      - wandb
+      - moviepy
+      - pybullet
+      - pygame
