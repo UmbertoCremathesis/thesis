@@ -16,6 +16,8 @@ env.bak/
 
 # === Jupyter ===
 .ipynb_checkpoints/
+.jupyter/
+.virtual_documents/
 
 # === Logs, outputs, weights, and models ===
 *.log

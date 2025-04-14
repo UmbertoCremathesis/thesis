@@ -6,16 +6,27 @@ This repository contains the code and experiments developed for my Bachelor's th
 
 ## ⚙️ Prerequisites
 
-Before getting started, make sure you have:
+Before getting started, make sure you have the following installed:
+
 - Conda (Anaconda or Miniconda)
 - Python 3.10+
 - Git
+- C/C++ build tools (required for packages like `mujoco-py`, `pybullet`, etc.)
 
-Check with:
+### Linux users (Ubuntu/Debian)
+
+Install required build tools with:
+
+```bash
+sudo apt update
+sudo apt install build-essential
+```
+
+You can verify that Conda is installed with:
+
 ```bash
 conda --version
 ```
-
 ---
 
 ## 📁 Repository Structure
