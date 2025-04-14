@@ -9,16 +9,17 @@ This repository contains the code and experiments developed for my Bachelor's th
 ```
 thesis/
 │
-├── gifs/                         # rollout visualizations and videos
-├── Minari/                       # local helper code (ignored by Git)
+├── gifs/                             # rollout visualizations and videos
+├── Minari/                           # local helper code (ignored by Git)
 │
-├── notebooks/                    # Jupyter Notebooks for each phase
+├── notebooks/                        # Jupyter Notebooks for each phase
 │   ├── 00_presentazione.ipynb        # initial dataset exploration (Pen)
 │   ├── 01_caricamento_datasets.ipynb # loading and inspecting Pen + Relocate datasets
 │   └── 02_algoritmi_d3rlpy.ipynb     # IQL and other offline RL experiments
+│   └── 03_due_dita.ipynb             # Pen task with only wrist, index, and thumb active 
 │
-├── results/                      # logs, plots, evaluation metrics
-├── environment.yml               # conda environment definition
+├── results/                          # logs, plots, evaluation metrics
+├── environment.yml                   # conda environment definition
 ├── .gitignore
 └── README.md
 ```
