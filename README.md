@@ -4,6 +4,20 @@ This repository contains the code and experiments developed for my Bachelor's th
 
 ---
 
+## ⚙️ Prerequisites
+
+Before getting started, make sure you have:
+- Conda (Anaconda or Miniconda)
+- Python 3.10+
+- Git
+
+Check with:
+```bash
+conda --version
+```
+
+---
+
 ## 📁 Repository Structure
 
 ```
@@ -11,7 +25,6 @@ thesis/
 │
 ├── gifs/                             # rollout visualizations and videos
 ├── Minari/                           # local helper code (ignored by Git)
-│
 ├── notebooks/                        # Jupyter Notebooks for each phase
 │   ├── 00_presentazione.ipynb        # initial dataset exploration (Pen)
 │   ├── 01_caricamento_datasets.ipynb # loading and inspecting Pen + Relocate datasets
@@ -19,6 +32,8 @@ thesis/
 │   └── 03_due_dita.ipynb             # Pen task with only wrist, index, and thumb active 
 │
 ├── results/                          # logs, plots, evaluation metrics
+├── scripts/                          # utility scripts (e.g., download datasets)
+│   └── download_datasets.py
 ├── environment.yml                   # conda environment definition
 ├── .gitignore
 └── README.md
@@ -28,27 +43,39 @@ thesis/
 
 ## 🚀 Getting Started
 
-### 1. Clone the repository via SSH
+### 1. Clone the repository
 
 ```bash
-git clone git@github.com:UmbertoCremathesis/thesis.git
+git clone https://github.com/UmbertoCremathesis/thesis.git
 cd thesis
 ```
 
 ### 2. Create and activate the environment
 
 ```bash
-conda env create -f environment.yml
+conda env create --file=environment.yml
 conda activate thesis-env
 ```
 
-### 3. Register the environment as a Jupyter kernel (once)
+### 3. Download required datasets
+
+This project uses datasets from the D4RL suite via Minari. Run the following script **before using the notebooks**:
+
+```bash
+python scripts/download_datasets.py
+```
+
+This will download all necessary datasets (e.g., Pen, Door, Relocate, Hammer) used throughout the project.
+
+> Make sure that the `thesis-env` environment is active when you run the script.
+
+### 4. Register the environment as a Jupyter kernel (once)
 
 ```bash
 python -m ipykernel install --user --name thesis-env --display-name "Python (thesis-env)"
 ```
 
-### 4. Launch Jupyter Lab
+### 5. Launch Jupyter Lab
 
 ```bash
 jupyter lab
@@ -65,6 +92,7 @@ Then, switch the notebook kernel to `Python (thesis-env)`.
 | `00_presentazione.ipynb`         | Initial exploration of Adroit Pen dataset |
 | `01_caricamento_datasets.ipynb` | Loads and analyzes Pen and Relocate datasets via Minari |
 | `02_algoritmi_d3rlpy.ipynb`     | Trains offline RL policies (e.g., IQL) using D3RLPY |
+| `03_due_dita.ipynb`             | Pen task with only wrist, index, and thumb active |
 
 ---
 
