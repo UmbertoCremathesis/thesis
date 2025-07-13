@@ -1,0 +1,55 @@
+Task: door
+Algorithm: iql
+Start time: 2025-07-04 13:47:59.322334
+End time: 2025-07-04 13:51:16.412225
+Total training time: 0:03:17.089891
+n_steps: 10000
+n_steps_per_epoch: 200
+batch_size: 512
+seed: 42
+n_evaluation_episodes: 25
+Number of episodes in dataset: 50
+
+Algorithm hyperparameters:
+batch_size: 512
+gamma: 0.99
+observation_scaler: StandardObservationScaler(mean=array([ 0.00217369, -0.57609909,  0.98934017,  0.09684403, -0.15434184,
+        0.03304525,  0.63005316,  0.22748158,  0.21167861,  0.12264555,
+        0.40514613,  0.30446709,  0.27107163, -0.01685164,  0.42542921,
+        0.34653742,  0.33233339,  0.0860026 , -0.13015015,  0.29483549,
+        0.42239907,  0.39076127,  0.07970636,  0.93754248,  0.19072347,
+       -0.36505689, -0.5165588 ,  1.51927247,  1.20478333,  0.2367609 ,
+       -0.25366304,  0.19869019,  0.36848641, -0.1320522 ,  0.14819104,
+       -0.13172551, -0.12161084,  0.05049915,  0.5504    ]), std=array([0.12577611, 0.27531701, 0.45925153, 0.07020409, 0.24193638,
+       0.14847274, 0.25357282, 0.23664947, 0.29511197, 0.15522586,
+       0.29516189, 0.14445283, 0.21360033, 0.17943614, 0.23998995,
+       0.19330458, 0.24247001, 0.0816116 , 0.19699641, 0.18022081,
+       0.2275375 , 0.32522308, 0.31732639, 0.22431271, 0.05328769,
+       0.10077641, 0.30105541, 0.57266534, 0.58266581, 0.131451  ,
+       0.15436871, 0.0434332 , 0.19351482, 0.1321603 , 0.05305903,
+       0.07818327, 0.07422266, 0.04668319, 0.8349011 ]), eps=0.001)
+action_scaler: MinMaxActionScaler(minimum=array([-1.        , -0.4629312 , -1.        , -0.6011482 ,  0.7186422 ,
+       -0.88234836, -0.89157325, -1.        , -1.        , -1.        ,
+       -0.34421787, -1.        , -1.        , -1.        , -0.6559923 ,
+       -1.        , -1.        , -1.        , -1.        , -1.        ,
+       -1.        , -1.        , -1.        , -1.        , -0.5014804 ,
+       -0.53974646, -1.        , -1.        ], dtype=float32), maximum=array([1.        , 0.4823499 , 0.5675746 , 0.6570447 , 1.        ,
+       0.838703  , 0.75211054, 1.        , 1.        , 1.        ,
+       0.9710269 , 1.        , 0.94769865, 0.91818243, 0.35954908,
+       1.        , 1.        , 1.        , 0.6659584 , 0.22023688,
+       1.        , 1.        , 1.        , 1.        , 1.        ,
+       1.        , 0.17930129, 1.        ], dtype=float32))
+reward_scaler: None
+compile_graph: False
+actor_learning_rate: 2e-05
+critic_learning_rate: 2e-05
+actor_optim_factory: AdamFactory(clip_grad_norm=None, lr_scheduler_factory=None, betas=(0.9, 0.999), eps=1e-08, weight_decay=0, amsgrad=False)
+critic_optim_factory: AdamFactory(clip_grad_norm=None, lr_scheduler_factory=None, betas=(0.9, 0.999), eps=1e-08, weight_decay=0, amsgrad=False)
+actor_encoder_factory: DefaultEncoderFactory(activation='relu', use_batch_norm=False, dropout_rate=None)
+critic_encoder_factory: DefaultEncoderFactory(activation='relu', use_batch_norm=False, dropout_rate=None)
+value_encoder_factory: DefaultEncoderFactory(activation='relu', use_batch_norm=False, dropout_rate=None)
+tau: 0.005
+n_critics: 2
+expectile: 0.7
+weight_temp: 7.0
+max_weight: 100.0
