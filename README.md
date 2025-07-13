@@ -66,27 +66,31 @@ gcc --version
 ```
 thesis/
 │
-├── gifs/                             # rollout visualizations and videos
+├── notebooks/                    
+│   ├── compare_rollout.ipynb
+│   ├── dataset_selection.ipynb
+│   ├── offline_training.ipynb
+│   ├── track_performance.ipynb
+│   └── visualize_policy.ipynb
 │
-├── Minari/                           # local helper code (ignored by Git)
+├── datasets/                       # Processed datasets used for training (e.g., .npz files)
 │
-├── notebooks/                        # Jupyter Notebooks for each phase
-│   ├── 00_presentazione.ipynb        # initial dataset exploration (Pen)
-│   ├── 01_caricamento_datasets.ipynb # loading and inspecting Pen + Relocate datasets
-│   └── 02_algoritmi_d3rlpy.ipynb     # IQL and other offline RL experiments
-│   └── 03_due_dita.ipynb             # Pen task with only wrist, index, and thumb active 
+├── performance/                    # Line plots of policy performance during training
 │
-├── results/                          # logs, plots, evaluation metrics
+├── policies/                       # Trained policies (.d3) for offline and models
 │
-├── scripts/                          # utility scripts (e.g., download datasets)
-│   └── download_datasets.py          # script to download all required D4RL Adroit datasets via Minari
+├── rollout/                        # Boxplots comparing policies across tasks and algorithms
 │
-├── environment.yml                   # conda environment definition
+├── training_logs/                 # Training logs for offline and fine-tuning experiments
 │
-├── .gitignore
+├── scripts/                        # Utility scripts
+│   └── download_datasets.py
 │
-└── README.md
+├── environment.yml                # Conda environment definition
+├── README.md
 ```
+
+
 
 ---
 
@@ -125,14 +129,17 @@ Then, switch the notebook kernel to `Python (thesis-env)`.
 
 ---
 
+
 ## 🧪 Notebooks
 
-| Notebook                         | Description |
-|----------------------------------|-------------|
-| `00_presentazione.ipynb`         | Initial exploration of Adroit Pen dataset |
-| `01_caricamento_datasets.ipynb` | Loads and analyzes Pen and Relocate datasets via Minari |
-| `02_algoritmi_d3rlpy.ipynb`     | Trains offline RL policies (e.g., IQL) using D3RLPY |
-| `03_due_dita.ipynb`             | Pen task with only wrist, index, and thumb active |
+| Notebook                     | Description |
+|------------------------------|-------------|
+| `dataset_selection.ipynb`    | Selection of balanced episodes using clustering |
+| `offline_training.ipynb`     | Offline RL training loop for multiple tasks and algorithms |
+| `visualize_policy.ipynb`     | Visual inspection of trained policies and rollouts |
+| `compare_rollout.ipynb`      | Side-by-side comparison of policy behaviors |
+| `track_performance.ipynb`    | Performance tracking and aggregation of training results |
+
 
 ---
 
