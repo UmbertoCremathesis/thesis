@@ -81,12 +81,12 @@ thesis/
 │
 ├── rollout/                        # Boxplots comparing policies across tasks and algorithms
 │
-├── training_logs/                 # Training logs for offline and fine-tuning experiments
+├── training_logs/                  # Training logs for offline and fine-tuning experiments
 │
 ├── scripts/                        # Utility scripts
 │   └── download_datasets.py
 │
-├── environment.yml                # Conda environment definition
+├── environment.yml                 # Conda environment definition
 ├── README.md
 ```
 
