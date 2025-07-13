@@ -1,6 +1,6 @@
 # Offline Reinforcement Learning for Robotic Control — Bachelor's Thesis
 
-This repository contains the code and experiments developed for my Bachelor’s thesis in Computer Engineering at the University of Padova. The project focuses on exploring and evaluating offline reinforcement learning algorithms in robotic simulation environments using Adroit tasks from the D4RL suite (Pen, Relocate, Door, and Hammer), accessed via Minari and trained with D3RLPY.
+This repository contains the code and experiments developed for my Bachelor’s thesis in Computer Engineering at the University of Padova. The project focuses on exploring and evaluating offline reinforcement learning algorithms in robotic simulation environments using Adroit tasks from the D4RL suite (Relocate, Door, Pen and Hammer), accessed via `minari` and trained with `d3rlpy`.
 
 ---
 
